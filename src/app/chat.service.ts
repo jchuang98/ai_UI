@@ -20,7 +20,7 @@ export class ChatService {
   constructor(private http: HttpClient) {}
 
   sendMessage(userInput: string) {
-    return this.http.post<{response: string}>('http://localhost:8001/api/chat', {
+    return this.http.post<{response: string}>('http://localhost:8000/api/chat', {
       input: userInput
     });
   }
